@@ -7,11 +7,11 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 public class Classification_Tests {
     @ParameterizedTest
-    @ValueSource(ints = {13,14,12})
-    @DisplayName("Check that 3,8,12 returns U, PG & 12 films are available.")
+    @ValueSource(ints = {1,13,12})
     void availableClassifications (int age){
         Assertions.assertEquals("U, PG & 12 films are available.",FilmClassifications.getAgeOfViewer(age));
     }
+    
     @ParameterizedTest
     @ValueSource(ints = {15,16,17})
     void availableClassifications15 (int age){

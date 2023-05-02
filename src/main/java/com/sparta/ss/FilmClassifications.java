@@ -3,10 +3,10 @@ package com.sparta.ss;
 
 public class FilmClassifications {
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         int ageOfViewer = 1;
         System.out.println(getAgeOfViewer(ageOfViewer));
-    }
+    }*/
 
 
     public static String getAgeOfViewer(int ageOfViewer) {
