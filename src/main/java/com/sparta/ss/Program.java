@@ -18,6 +18,7 @@ public class Program {
         System.out.print("Enter a string: ");
         String inputString = scanner.nextLine();
 
+      // String cleanedString = inputString.toLowerCase().replaceAll("[^a-z]", "");
 
 
         if (isPalindrome(inputString)) {
@@ -29,7 +30,7 @@ public class Program {
         //Palindrome Checker for longest word in a sentence
         String[] sentence = {"racecar", "madam", "hello", "level", "world", "radar","malayalam"};
         String longestPalindrome = PalindromeChecker2.findLongestPalindrome(sentence);
-        System.out.println("Longest palindrome in the sentence: " + longestPalindrome);
+        System.out.println("Longest palindrome in the sentence is: " + longestPalindrome);
 
 
         //Bubble Sort Output
