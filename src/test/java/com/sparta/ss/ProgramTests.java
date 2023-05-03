@@ -8,20 +8,20 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 public class ProgramTests {
     @ParameterizedTest
-    @ValueSource(ints = {5,8,12})
-    @DisplayName("Check that 5,8,12 returns Good Morning")
+    @ValueSource(ints = {5,8,24})
+    @DisplayName("Test Case 1:")
     void checkForGoodMorning(int time){
         Assertions.assertEquals("Good morning!",Program.getGreeting(time));
     }
     @ParameterizedTest
     @ValueSource(ints = {12,16,17})
-
+    @DisplayName("Test Case 2:")
     void checkForGoodAfternoon(int time){
         Assertions.assertEquals("Good afternoon!",Program.getGreeting(time));
     }
     @ParameterizedTest
     @ValueSource(ints = {18,20,23})
-
+    @DisplayName("Test Case 3:")
     void checkForGoodEvening(int time){
         Assertions.assertEquals("Good evening!",Program.getGreeting(time));
     }
