@@ -5,11 +5,17 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class PalindromeChecker1_Tests {
+public class PalindromeChecker1Tests {
     @ParameterizedTest
     @ValueSource(strings = {"malayalam","madam"})
     @DisplayName("Test Case 1:")
     void checkForPalindrome(String word){
         Assertions.assertEquals(true,PalindromeChecker1.isPalindrome(word));
+    }
+    @ParameterizedTest
+    @ValueSource(strings = {"maiden","leave"})
+    @DisplayName("Test Case 2:")
+    void checkForNotPalindrome(String word){
+        Assertions.assertEquals(false,PalindromeChecker1.isPalindrome(word));
     }
 }

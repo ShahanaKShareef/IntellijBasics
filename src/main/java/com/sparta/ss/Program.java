@@ -1,32 +1,42 @@
 package com.sparta.ss;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static com.sparta.ss.PalindromeChecker1.isPalindrome;
 
 public class Program {
     public static void main(String[] args) {
+
+        // Greeting
         int timeOfDay = 21;
         System.out.println(getGreeting(timeOfDay));
 
+
+        // Check if a word is palindrome
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String inputString = scanner.nextLine();
 
 
 
-        // Convert the input string to lowercase and remove all non-letter characters
-     //   String cleanedString = inputString.toLowerCase().replaceAll("[^a-z]", "");
-
-        // Check if the cleaned string is a palindrome
         if (isPalindrome(inputString)) {
             System.out.println(inputString + " is a palindrome.");
         } else {
             System.out.println(inputString + " is not a palindrome.");
         }
+
+        //Palindrome Checker for longest word in a sentence
         String[] sentence = {"racecar", "madam", "hello", "level", "world", "radar","malayalam"};
         String longestPalindrome = PalindromeChecker2.findLongestPalindrome(sentence);
         System.out.println("Longest palindrome in the sentence: " + longestPalindrome);
+
+
+        //Bubble Sort Output
+        int[] arr = {14,15,4,5,6,8};
+        System.out.println("Original array: " + Arrays.toString(arr));
+        BubbleSort.bubbleSort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
     }
 
 
